@@ -22,7 +22,7 @@ public interface WorkerFeignClient {
 config do FeignClient
 
 usamos o url= "localhost:8001" quando temos apenas uma localização, com balanceamento de carga
-suamos outra forma, é o baleceamento de cara com Ribbon
+usamos outra forma, é o baleceamento de cara com Ribbon
 @FeignClient(name = "hr-worker", url= "localhost:8001", path = "/workers")
 
 @Component //essa interface vai ser um component gerenciado pelo spring
