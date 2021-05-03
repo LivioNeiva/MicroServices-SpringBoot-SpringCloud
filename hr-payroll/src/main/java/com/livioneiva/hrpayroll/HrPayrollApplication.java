@@ -6,7 +6,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-//o components HrPayroll vai ser client do components hr-worker
+//o components //HrPayroll vai ser client do components hr-worker
+//hrPayroll vai ser client de hr-worker
 //@RibbonClient(name = "hr-worker") //cliente Ribbon, com essa annotations o hrpayroll é quem vai usaar o balanciamento de carga
 @EnableEurekaClient
 @EnableFeignClients

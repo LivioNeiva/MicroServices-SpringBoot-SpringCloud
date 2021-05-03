@@ -17,19 +17,21 @@ import com.livioneiva.hrpayroll.feignclients.WorkerFeignClient;
 @Service
 public class PaymentService {
 
+	//dependencia
 	@Autowired
 	private WorkerFeignClient workerFeignClient;
 	
 	//vamos fazer uma requisiçao externa usando HastTemplate
 	public Payment getPayment(Long workerId, int days) {
 		
+		//.getBody() -> para que eu possa pegar o corpo da requisiçao está ResponseEntity
 		Worker worker = workerFeignClient.findById(workerId).getBody();
 		return new Payment(worker.getName(), worker.getDailyIncome(), days);
 	}
 }
 
 /*
-//essa propriedade esta no application.properties
+//essa propriedade esta no application.properties do componente wrPayroll
 @Value("${hr-worker.host}")
 private String workerHost;
 @Autowired

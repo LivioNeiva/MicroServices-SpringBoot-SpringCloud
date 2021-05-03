@@ -24,7 +24,7 @@ os web point
 @RequestMapping(value = "/workers")
 public class workerResource {
 	
-	//esse obj serve para imprimir no log
+	//esse obj serve para imprimir no log, temos por a class workerResource
 	@Autowired
 	private static Logger logger = LoggerFactory.getLogger(workerResource.class);
 	
